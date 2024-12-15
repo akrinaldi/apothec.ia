@@ -1,0 +1,2 @@
+# LichenComp
+Code for dissertation
