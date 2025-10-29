@@ -992,25 +992,26 @@ def ennui_parse(list,env):
 
 #strict_parse_and_eval(tokens_list,env)
 #floaty_parse_and_eval(tokens_list,env)
-fugue_parse_and_eval(tokens_list,env)
+#fugue_parse_and_eval(tokens_list,env)
 
 #except Exception as e - this is how we will handle state change
 #if you encounter an exception, run state_selector again
         
-# while program_state is not None:
-#     try:
-#         if program_state == 'strict':
-#             strict_parse_and_eval(tokens_list,env)
-#         elif program_state == 'ennui':
-#             ennui_parse(tokens_list,env)
-#         elif program_state == 'floaty':
-#             floaty_parse_and_eval(tokens_list,env)
-#         elif program_state == 'fugue':
-#             fugue_parse_and_eval(tokens_list,env)
-#         else:
-#             print('uncertainty encountered')
-#     except Exception as e:
-#         program_state = state_selector(program_state)
-#         print("error detected, state has changed to " + program_state)
-#         continue
-#     break
+while program_state is not None:
+    try:
+        if program_state == 'strict':
+             strict_parse_and_eval(tokens_list,env)
+        elif program_state == 'ennui':
+             ennui_parse(tokens_list,env)
+        elif program_state == 'floaty':
+             floaty_parse_and_eval(tokens_list,env)
+        elif program_state == 'fugue':
+             fugue_parse_and_eval(tokens_list,env)
+        else:
+             print('uncertainty encountered')
+     except Exception as e:
+         program_state = state_selector(program_state)
+         print("error detected, state has changed to " + program_state)
+         continue
+
+     break
