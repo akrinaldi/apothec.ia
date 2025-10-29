@@ -1,0 +1,5 @@
+strict
+x has 2
+propose 2 isin x ~ observe x unless ~ observe 5
+propose 3 notin x ~ observe 7
+observe x
